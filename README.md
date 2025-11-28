@@ -46,13 +46,15 @@ create table zepto(
 ```sql
 SELECT COUNT(*) FROM zepto;
 ```
+<img width="102" height="66" alt="image" src="https://github.com/user-attachments/assets/0cdd6a7c-5f62-4947-80a7-354e7e286901" />
 
 ### 2.2 Sample Data
 
 ```sql
 SELECT * FROM zepto LIMIT 10;
 ```
-<img width="102" height="66" alt="image" src="https://github.com/user-attachments/assets/0cdd6a7c-5f62-4947-80a7-354e7e286901" />
+<img width="986" height="246" alt="image" src="https://github.com/user-attachments/assets/07ba0760-cfb0-4574-bcef-30492d1e9865" />
+
 
 ### 2.3 Null Value Detection
 
@@ -76,6 +78,7 @@ SELECT DISTINCT category
 FROM zepto
 ORDER BY category;
 ```
+<img width="172" height="332" alt="image" src="https://github.com/user-attachments/assets/e925f3d1-ac28-4ee8-88ae-d8cab64de56b" />
 
 ### 2.5 Stock Status Distribution
 
@@ -84,6 +87,7 @@ SELECT outofStock, COUNT(sku_id)
 FROM zepto
 GROUP BY outofStock;
 ```
+<img width="163" height="77" alt="image" src="https://github.com/user-attachments/assets/dd8e6c50-e7a1-4945-abbd-f3e1ea585a3a" />
 
 ### 2.6 Products Appearing Multiple Times
 
@@ -94,6 +98,7 @@ GROUP BY name
 HAVING COUNT(sku_id) > 1
 ORDER BY COUNT(sku_id) DESC;
 ```
+<img width="595" height="250" alt="image" src="https://github.com/user-attachments/assets/e3c8a1dc-d9ca-483a-aff4-62a89726ba60" />
 
 ---
 
@@ -105,6 +110,7 @@ ORDER BY COUNT(sku_id) DESC;
 SELECT * FROM zepto
 WHERE mrp = 0 OR discountedSellingPrice = 0;
 ```
+<img width="1063" height="63" alt="image" src="https://github.com/user-attachments/assets/8c913d1c-6438-46f7-8b87-5d7a571cb43e" />
 
 ```sql
 DELETE FROM zepto
@@ -131,6 +137,7 @@ FROM zepto
 ORDER BY discountPercent DESC
 LIMIT 10;
 ```
+<img width="567" height="266" alt="image" src="https://github.com/user-attachments/assets/b191fed1-a5a4-42fe-a911-1bfa68e592f1" />
 
 ### Q2. Products with High MRP but Out of Stock
 
@@ -143,6 +150,7 @@ WHERE outofStock = 'true'
 ORDER BY mrp DESC
 LIMIT 10;
 ```
+<img width="529" height="272" alt="image" src="https://github.com/user-attachments/assets/1c5fab1b-c400-4df7-b780-86897ccdc76b" />
 
 ### Q3. Estimated Revenue per Category
 
@@ -153,6 +161,7 @@ FROM zepto
 GROUP BY category
 ORDER BY TotalRevenue;
 ```
+<img width="307" height="390" alt="image" src="https://github.com/user-attachments/assets/5ad13985-c01b-4f4c-8c82-65b530842469" />
 
 ### Q4. Products with MRP > 500 and Discount < 10%
 
@@ -164,6 +173,7 @@ FROM zepto
 WHERE mrp > 500 AND discountPercent < 10
 ORDER BY mrp DESC, discountPercent DESC;
 ```
+<img width="740" height="501" alt="image" src="https://github.com/user-attachments/assets/264f8dd5-bdb9-4260-9fef-d02ac6df1675" />
 
 ### Q5. Top 5 Categories by Highest Average Discount Percentage
 
@@ -175,6 +185,7 @@ GROUP BY category
 ORDER BY avg_discount DESC
 LIMIT 5;
 ```
+<img width="310" height="165" alt="image" src="https://github.com/user-attachments/assets/7a7d12a1-793b-45b7-8361-0e0162b3df4c" />
 
 ### Q6. Price per Gram for Products above 100g
 
@@ -187,6 +198,7 @@ FROM zepto
 WHERE weightInGms >= 100
 ORDER BY Price_perGrams ASC;
 ```
+<img width="891" height="505" alt="image" src="https://github.com/user-attachments/assets/0232d005-2d9c-47ec-be35-9a0011ca7d1b" />
 
 ### Q7. Weight-Based Product Classification
 
@@ -200,6 +212,7 @@ SELECT DISTINCT name,
        END AS WeightCategory
 FROM zepto;
 ```
+<img width="825" height="519" alt="image" src="https://github.com/user-attachments/assets/59e9b104-06c0-436e-8b59-4b0b77908eb9" />
 
 ### Q8. Total Inventory Weight per Category
 
@@ -210,6 +223,7 @@ FROM zepto
 GROUP BY category
 ORDER BY TotalInventoryCategorywise DESC;
 ```
+<img width="381" height="396" alt="image" src="https://github.com/user-attachments/assets/d05f2b1a-ffeb-4b3e-a4e0-b1fd28510f01" />
 
 ---
 
@@ -229,10 +243,8 @@ WHERE mrp > (
 )
 ORDER BY category, mrp DESC;
 ```
+<img width="763" height="234" alt="image" src="https://github.com/user-attachments/assets/c22e2adf-b80f-44d1-881c-70a21f786bdf" />
 
 
-## 6. Conclusion
 
-This SQL analysis provides a comprehensive understanding of product pricing, discount behavior, category performance, and inventory distribution. The queries included here cover data cleaning, exploration, and insightful business analytics. Additional advanced analysis can be added to make the insights deeper and more meaningful depending on business requirements.
 
-If needed, further dashboards, visualizations, or automated reports can be created on top of this SQL output.
