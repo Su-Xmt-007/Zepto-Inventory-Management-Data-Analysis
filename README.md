@@ -36,6 +36,7 @@ create table zepto(
 );
 ```
 
+
 ---
 
 ## 2. Data Exploration
@@ -51,6 +52,7 @@ SELECT COUNT(*) FROM zepto;
 ```sql
 SELECT * FROM zepto LIMIT 10;
 ```
+<img width="102" height="66" alt="image" src="https://github.com/user-attachments/assets/0cdd6a7c-5f62-4947-80a7-354e7e286901" />
 
 ### 2.3 Null Value Detection
 
