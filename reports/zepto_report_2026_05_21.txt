@@ -1,0 +1,23 @@
+
+ZEPTO INVENTORY DAILY REPORT
+Generated : 2026-05-21 08:13:36
+=============================================
+
+CATALOGUE SNAPSHOT
+  Total SKUs          : 3,692
+  Out of Stock        : 450 (12.2%)
+  Low Stock (≤2 units) : 533 (14.4%)
+  Combined at-risk    : 983 (26.6%)
+
+PRICING
+  Avg MRP             : ₹156.71
+  Median MRP          : ₹110.00
+  Zero-discount items : 1161 (31.4%)
+
+TOP 3 WORST STOCKED CATEGORIES
+  Biscuits                        : 28.5% OOS
+  Beverages                       : 21.7% OOS
+  Dairy, Bread & Batter           : 21.7% OOS
+
+---------------------------------------------
+Database: zepto_db | Table: products
